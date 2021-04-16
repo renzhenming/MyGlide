@@ -35,28 +35,8 @@ public class Glide {
     }
 
     @NonNull
-    public static RequestManager with(@NonNull Activity activity) {
-        return getRetriever(activity).get(activity);
-    }
-
-
-    @NonNull
     public static RequestManager with(@NonNull FragmentActivity activity) {
         return getRetriever(activity).get(activity);
-    }
-
-
-    @NonNull
-    public static RequestManager with(@NonNull Fragment fragment) { // androidx Fragment
-        return getRetriever(fragment.getActivity()).get(fragment);
-    }
-
-
-    @SuppressWarnings("deprecation")
-    @Deprecated
-    @NonNull
-    public static RequestManager with(@NonNull android.app.Fragment fragment) { // app.Fragment
-        return getRetriever(fragment.getActivity()).get(fragment);
     }
 
     @NonNull
