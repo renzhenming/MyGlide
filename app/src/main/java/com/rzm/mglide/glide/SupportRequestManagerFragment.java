@@ -25,4 +25,22 @@ public class SupportRequestManagerFragment extends Fragment {
     public ActivityFragmentLifecycle getGlideLifeCycle() {
         return lifeCycle;
     }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        lifeCycle.onStart();
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        lifeCycle.onStop();
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        lifeCycle.onDestroy();
+    }
 }
